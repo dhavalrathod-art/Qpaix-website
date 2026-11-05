@@ -72,8 +72,8 @@
   ];
   // Home page design versions, shown in the "Home" dropdown. Add Version 3 / 4 here.
   const HOME_VERSIONS = [
-    { key: 'v1', label: 'Version 1', desc: 'Classic navy hero', href: 'index.html' },
-    { key: 'v2', label: 'Version 2', desc: 'Image slider, rounded header', href: 'index-v2.html' },  ];
+    { key: 'v1', label: 'Version 1', desc: 'Classic navy hero', href: 'index-v2.html' },
+    { key: 'v2', label: 'Version 2', desc: 'Image slider, rounded header', href: 'index.html' },  ];
   const NAV = [
     { key: 'home', label: 'Home', href: 'index.html', children: HOME_VERSIONS },
     { key: 'about', label: 'About', href: 'about.html' },
