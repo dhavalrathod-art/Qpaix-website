@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qpaix Style Guide</title>
+  <meta name="robots" content="noindex">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-canvas">
+
+  <!-- Intro -->
+  <header class="bg-navy-900 bg-grid text-white">
+    <div class="container py-14 md:py-20">
+      <img src="img/Qpaix-logo.png" alt="Qpaix" class="logo-white h-8 md:h-10 w-auto">
+      <h1 class="mt-10 text-4xl md:text-5xl font-extrabold tracking-tight">Design System</h1>
+      <p class="mt-4 max-w-2xl text-navy-100 text-lg">Colours, fonts, buttons and cards used across the new Qpaix website. Every page is built from these pieces.</p>
+      <nav class="mt-8 flex flex-wrap gap-2 text-sm">
+        <a href="#logo" class="badge bg-white/10 text-white">Logo</a>
+        <a href="#colors" class="badge bg-white/10 text-white">Colours</a>
+        <a href="#type" class="badge bg-white/10 text-white">Typography</a>
+        <a href="#buttons" class="badge bg-white/10 text-white">Buttons</a>
+        <a href="#cards" class="badge bg-white/10 text-white">Cards</a>
+        <a href="#forms" class="badge bg-white/10 text-white">Forms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container py-12 md:py-16 space-y-16">
+
+    <!-- 01 Logo -->
+    <section id="logo">
+      <span class="eyebrow">01 · Logo</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-bold text-navy-900">Logo usage</h2>
+      <div class="mt-6 grid gap-5 md:grid-cols-3">
+        <div class="card p-8 flex flex-col items-center justify-center gap-4 min-h-[180px]">
+          <img src="img/Qpaix-logo.png" alt="Qpaix logo on white" class="h-10 w-auto">
+          <span class="text-xs text-muted">On white</span>
+        </div>
+        <div class="card p-8 flex flex-col items-center justify-center gap-4 min-h-[180px] bg-canvas">
+          <img src="img/Qpaix-logo.png" alt="Qpaix logo on light grey" class="h-10 w-auto">
+          <span class="text-xs text-muted">On light background</span>
+        </div>
+        <div class="rounded-2xl p-8 flex flex-col items-center justify-center gap-4 min-h-[180px] bg-navy-900">
+          <img src="img/Qpaix-logo.png" alt="Qpaix logo in white on navy" class="logo-white h-10 w-auto">
+          <span class="text-xs text-navy-200">White version on navy</span>
+        </div>
+      </div>
+      <p class="mt-4 text-sm text-muted">Minimum height: 28px on mobile, 36px on desktop. Keep clear space equal to the height of the "i" around the logo.</p>
+    </section>
+
+    <!-- 02 Colours -->
+    <section id="colors">
+      <span class="eyebrow">02 · Colours</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-bold text-navy-900">Colour palette</h2>
+      <p class="mt-2 text-muted">Click any colour to copy its hex code.</p>
+
+      <!-- Core colours -->
+      <div class="mt-6 grid gap-4 grid-cols-2 md:grid-cols-4">
+        <button data-copy="#042439" class="card overflow-hidden text-left">
+          <div class="h-28 bg-navy-900"></div>
+          <div class="p-4"><p class="font-semibold text-ink">Primary Navy</p><p class="text-sm text-muted">#042439 · <span data-copy-tip>Logo colour</span></p></div>
+        </button>
+        <button data-copy="#06B6D4" class="card overflow-hidden text-left">
+          <div class="h-28 bg-accent-500"></div>
+          <div class="p-4"><p class="font-semibold text-ink">Accent Cyan</p><p class="text-sm text-muted">#06B6D4 · <span data-copy-tip>CTAs, links</span></p></div>
+        </button>
+        <button data-copy="#021624" class="card overflow-hidden text-left">
+          <div class="h-28 bg-navy-950"></div>
+          <div class="p-4"><p class="font-semibold text-ink">Navy Dark</p><p class="text-sm text-muted">#021624 · <span data-copy-tip>Footer</span></p></div>
+        </button>
+        <button data-copy="#F5F8FB" class="card overflow-hidden text-left">
+          <div class="h-28 bg-canvas border-b border-line"></div>
+          <div class="p-4"><p class="font-semibold text-ink">Canvas</p><p class="text-sm text-muted">#F5F8FB · <span data-copy-tip>Section bg</span></p></div>
+        </button>
+      </div>
+
+      <!-- Scales -->
+      <div class="mt-8 card p-5 md:p-6 space-y-6">
+        <div>
+          <p class="text-sm font-semibold text-ink mb-3">Navy scale</p>
+          <div id="navy-scale" class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-11 gap-2"></div>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-ink mb-3">Accent scale</p>
+          <div id="accent-scale" class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-11 gap-2"></div>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-ink mb-3">Text &amp; borders</p>
+          <div class="grid grid-cols-3 gap-2 max-w-md">
+            <button data-copy="#0F172A" class="text-left"><div class="h-12 rounded-lg bg-ink"></div><p class="mt-1 text-xs text-muted">Ink #0F172A</p></button>
+            <button data-copy="#64748B" class="text-left"><div class="h-12 rounded-lg bg-muted"></div><p class="mt-1 text-xs text-muted">Muted #64748B</p></button>
+            <button data-copy="#E2E8F0" class="text-left"><div class="h-12 rounded-lg bg-line"></div><p class="mt-1 text-xs text-muted">Line #E2E8F0</p></button>
+          </div>
+        </div>
+      </div>
+      <p class="mt-4 text-sm text-muted">Rule: white text on navy, navy text on cyan. Never white text on cyan (too low contrast to read).</p>
+    </section>
+
+    <!-- 03 Typography -->
+    <section id="type">
+      <span class="eyebrow">03 · Typography</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-bold text-navy-900">Fonts &amp; sizes</h2>
+      <div class="mt-6 grid gap-5 lg:grid-cols-2">
+        <div class="card p-6">
+          <p class="text-xs font-semibold text-muted uppercase tracking-wider">Headings · Plus Jakarta Sans</p>
+          <p class="mt-3 font-heading text-6xl font-extrabold text-navy-900">Aa</p>
+          <p class="mt-2 text-sm text-muted">Weights 600, 700, 800</p>
+        </div>
+        <div class="card p-6">
+          <p class="text-xs font-semibold text-muted uppercase tracking-wider">Body · Inter</p>
+          <p class="mt-3 font-sans text-6xl font-medium text-navy-900">Aa</p>
+          <p class="mt-2 text-sm text-muted">Weights 400, 500, 600</p>
+        </div>
+      </div>
+      <div class="mt-5 card p-6 md:p-8 space-y-6 overflow-hidden">
+        <div class="grid md:grid-cols-[120px_1fr] gap-1 md:gap-6 items-baseline">
+          <span class="text-xs text-muted">H1 · 48–60px</span>
+          <p class="font-heading text-4xl md:text-6xl font-extrabold tracking-tight text-navy-900 leading-tight">Build smarter software</p>
+        </div>
+        <div class="grid md:grid-cols-[120px_1fr] gap-1 md:gap-6 items-baseline">
+          <span class="text-xs text-muted">H2 · 36–40px</span>
+          <p class="font-heading text-3xl md:text-4xl font-bold text-navy-900">Services we offer</p>
+        </div>
+        <div class="grid md:grid-cols-[120px_1fr] gap-1 md:gap-6 items-baseline">
+          <span class="text-xs text-muted">H3 · 24px</span>
+          <p class="font-heading text-2xl font-bold text-navy-900">Enterprise AI Solutions</p>
+        </div>
+        <div class="grid md:grid-cols-[120px_1fr] gap-1 md:gap-6 items-baseline">
+          <span class="text-xs text-muted">H4 · 18px</span>
+          <p class="font-heading text-lg font-semibold text-navy-900">Agile delivery, every sprint</p>
+        </div>
+        <div class="grid md:grid-cols-[120px_1fr] gap-1 md:gap-6 items-baseline">
+          <span class="text-xs text-muted">Lead · 18px</span>
+          <p class="text-lg text-muted max-w-2xl">We help Indian businesses design, build and scale software products with AI, cloud and data.</p>
+        </div>
+        <div class="grid md:grid-cols-[120px_1fr] gap-1 md:gap-6 items-baseline">
+          <span class="text-xs text-muted">Body · 16px</span>
+          <p class="text-base text-ink/80 max-w-2xl leading-relaxed">From the first idea to launch and support, our team of Java, React and mobile engineers works as an extension of yours, with clear timelines and weekly updates.</p>
+        </div>
+        <div class="grid md:grid-cols-[120px_1fr] gap-1 md:gap-6 items-baseline">
+          <span class="text-xs text-muted">Eyebrow</span>
+          <p><span class="eyebrow">What we do</span></p>
+        </div>
+        <div class="grid md:grid-cols-[120px_1fr] gap-1 md:gap-6 items-baseline">
+          <span class="text-xs text-muted">Highlight</span>
+          <p class="font-heading text-3xl font-bold bg-navy-900 text-white inline-block px-4 py-2 rounded-xl">Powered by <span class="text-gradient">AI</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Buttons & badges -->
+    <section id="buttons">
+      <span class="eyebrow">04 · Buttons</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-bold text-navy-900">Buttons &amp; badges</h2>
+      <div class="mt-6 grid gap-5 lg:grid-cols-2">
+        <div class="card p-6">
+          <p class="text-sm font-semibold text-ink mb-4">On light background</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="#" class="btn btn-primary">Book a Free Call</a>
+            <a href="#" class="btn btn-accent">Get a Quote
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#" class="btn btn-outline">Our Work</a>
+            <a href="#" class="btn btn-ghost">Read more →</a>
+          </div>
+          <div class="mt-5 flex flex-wrap items-center gap-3">
+            <a href="#" class="btn btn-primary btn-sm">Small</a>
+            <a href="#" class="btn btn-primary">Default</a>
+            <a href="#" class="btn btn-primary btn-lg">Large</a>
+          </div>
+        </div>
+        <div class="rounded-2xl p-6 bg-navy-900 bg-grid">
+          <p class="text-sm font-semibold text-white mb-4">On navy background</p>
+          <div class="flex flex-wrap items-center gap-3">
+            <a href="#" class="btn btn-accent">Book a Free Call</a>
+            <a href="#" class="btn btn-outline-light">View Portfolio</a>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-2">
+            <span class="badge bg-white/10 text-accent-300">AI &amp; ML</span>
+            <span class="badge bg-white/10 text-white">Cloud</span>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 card p-6">
+        <p class="text-sm font-semibold text-ink mb-4">Badges / tags</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="badge">AI &amp; ML</span>
+          <span class="badge">Cloud</span>
+          <span class="badge badge-navy">Java</span>
+          <span class="badge badge-navy">React</span>
+          <span class="badge badge-navy">Flutter</span>
+          <span class="badge bg-emerald-50 text-emerald-700">● Hiring</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Cards -->
+    <section id="cards">
+      <span class="eyebrow">05 · Cards</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-bold text-navy-900">Card styles</h2>
+      <p class="mt-2 text-muted">Hover over the cards to see the effect.</p>
+
+      <div class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Service card -->
+        <article class="card card-hover p-6 group">
+          <div class="icon-fill w-12 h-12 rounded-xl bg-accent-50 text-accent-600 grid place-items-center">
+            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/></svg>
+          </div>
+          <h3 class="mt-5 text-xl font-bold text-navy-900">Enterprise AI Solutions</h3>
+          <p class="mt-2 text-muted leading-relaxed">Chatbots, document AI and predictive models built into your existing systems.</p>
+          <a href="#" class="mt-4 inline-flex items-center gap-1 font-semibold text-navy-900 group-hover:text-accent-600">Learn more <span aria-hidden="true">→</span></a>
+        </article>
+
+        <!-- Stat card -->
+        <article class="rounded-2xl p-6 bg-navy-900 text-white flex flex-col justify-between min-h-[220px] relative overflow-hidden">
+          <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-accent-500/20 blur-2xl"></div>
+          <span class="badge bg-white/10 text-accent-300 self-start">Stat card</span>
+          <div>
+            <p class="font-heading text-5xl font-extrabold">50<span class="text-accent-400">+</span></p>
+            <p class="mt-1 text-navy-100">Projects delivered</p>
+          </div>
+        </article>
+
+        <!-- Testimonial card -->
+        <article class="card p-6 flex flex-col">
+          <div class="flex gap-0.5 text-amber-400" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="mt-3 text-ink/80 leading-relaxed flex-1">"Qpaix delivered our app on time and the team was easy to work with. Weekly demos kept us in the loop."</p>
+          <div class="mt-5 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy-100 text-navy-900 grid place-items-center font-bold">RS</div>
+            <div><p class="font-semibold text-ink text-sm">Client Name</p><p class="text-xs text-muted">Founder, Company</p></div>
+          </div>
+        </article>
+
+        <!-- Blog card -->
+        <article class="card card-hover overflow-hidden group">
+          <div class="aspect-[16/9] bg-gradient-to-br from-navy-700 to-accent-600 relative">
+            <span class="badge absolute left-4 top-4 bg-white text-navy-900">AI</span>
+          </div>
+          <div class="p-6">
+            <p class="text-xs text-muted">12 Oct 2026 · 5 min read</p>
+            <h3 class="mt-2 text-lg font-bold text-navy-900 group-hover:text-accent-600 transition-colors">How Indian SMEs can use AI without a big budget</h3>
+            <p class="mt-2 text-sm text-muted line-clamp-2">A practical guide to the first three AI projects that pay back fast.</p>
+          </div>
+        </article>
+
+        <!-- Case study card -->
+        <article class="card card-hover overflow-hidden group md:col-span-2">
+          <div class="grid sm:grid-cols-2 h-full">
+            <div class="bg-canvas min-h-[180px] grid place-items-center text-muted text-sm border-b sm:border-b-0 sm:border-r border-line">Project image</div>
+            <div class="p-6 flex flex-col">
+              <div class="flex flex-wrap gap-2"><span class="badge">Healthcare</span><span class="badge badge-navy">Java · React</span></div>
+              <h3 class="mt-3 text-xl font-bold text-navy-900">Clinic management platform</h3>
+              <p class="mt-2 text-sm text-muted">Appointments, billing and reports in one system for a 12-branch clinic chain.</p>
+              <div class="mt-4 grid grid-cols-2 gap-3">
+                <div><p class="font-heading text-2xl font-extrabold text-navy-900">40%</p><p class="text-xs text-muted">Less admin time</p></div>
+                <div><p class="font-heading text-2xl font-extrabold text-navy-900">3x</p><p class="text-xs text-muted">Faster billing</p></div>
+              </div>
+              <a href="#" class="mt-auto pt-4 font-semibold text-navy-900 group-hover:text-accent-600">View case study →</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 06 Forms -->
+    <section id="forms">
+      <span class="eyebrow">06 · Forms</span>
+      <h2 class="mt-3 text-2xl md:text-3xl font-bold text-navy-900">Form fields</h2>
+      <form class="mt-6 card p-6 md:p-8 grid gap-5 md:grid-cols-2" onsubmit="return false">
+        <div>
+          <label class="field-label" for="sg-name">Full name</label>
+          <input id="sg-name" class="field" type="text" placeholder="Your name">
+        </div>
+        <div>
+          <label class="field-label" for="sg-email">Work email</label>
+          <input id="sg-email" class="field" type="email" placeholder="you@company.com">
+        </div>
+        <div>
+          <label class="field-label" for="sg-phone">Phone</label>
+          <input id="sg-phone" class="field" type="tel" placeholder="+91 98765 43210">
+        </div>
+        <div>
+          <label class="field-label" for="sg-service">Service</label>
+          <select id="sg-service" class="field">
+            <option>Software Development</option>
+            <option>Enterprise AI Solutions</option>
+            <option>Data Analytics</option>
+            <option>IoT Solutions</option>
+            <option>Cloud Platform Services</option>
+            <option>Drone Services</option>
+          </select>
+        </div>
+        <div class="md:col-span-2">
+          <label class="field-label" for="sg-msg">Project details</label>
+          <textarea id="sg-msg" class="field min-h-[120px]" placeholder="Tell us briefly about your project"></textarea>
+        </div>
+        <div class="md:col-span-2 flex flex-wrap items-center justify-between gap-4">
+          <p class="text-sm text-muted">We reply within 1 business day.</p>
+          <button class="btn btn-accent" type="submit">Send Message</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="bg-navy-950 text-navy-200 text-sm">
+    <div class="container py-8 flex flex-wrap items-center justify-between gap-4">
+      <img src="img/Qpaix-logo.png" alt="Qpaix" class="logo-white h-6 w-auto">
+      <p>Qpaix design system · internal reference page</p>
+    </div>
+  </footer>
+
+  <script>
+    // Render colour scales from the Tailwind config
+    [['navy-scale', tailwind.config.theme.extend.colors.navy], ['accent-scale', tailwind.config.theme.extend.colors.accent]]
+      .forEach(([id, scale]) => {
+        const wrap = document.getElementById(id);
+        Object.entries(scale).forEach(([step, hex]) => {
+          const btn = document.createElement('button');
+          btn.className = 'text-left';
+          btn.setAttribute('data-copy', hex);
+          btn.innerHTML = `<div class="h-12 rounded-lg border border-black/5" style="background:${hex}"></div>
+            <p class="mt-1 text-xs font-medium text-ink">${step}</p>
+            <p class="text-[11px] text-muted" data-copy-tip>${hex}</p>`;
+          wrap.appendChild(btn);
+        });
+      });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>

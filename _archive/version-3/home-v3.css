@@ -1,0 +1,60 @@
+/* Home page – Version 3 only */
+
+/* ---------- Hero ---------- */
+.v3-hero-bg {
+  background-color: #fff;
+  background-image:
+    radial-gradient(60% 60% at 85% 10%, rgba(34,211,238,.18), transparent 60%),
+    radial-gradient(50% 50% at 0% 100%, rgba(4,36,57,.08), transparent 60%),
+    linear-gradient(rgba(4,36,57,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(4,36,57,.045) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 56px 56px, 56px 56px;
+}
+.typed-caret { display: inline-block; width: 4px; height: .9em; margin-left: 6px; vertical-align: -0.08em; background: #06B6D4; border-radius: 2px; animation: caret 1s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+.typed-word { background: linear-gradient(90deg, #0891B2, #06B6D4); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* ---------- Stacking service cards ---------- */
+.stack-card { position: sticky; top: calc(96px + var(--n, 0) * 18px); }
+@media (max-width: 767px) { .stack-card { position: relative; top: 0; } }
+
+/* ---------- Comparison table ---------- */
+.cmp-qpaix { background: #042439; color: #fff; }
+.cmp-row:hover td { background-color: rgba(6,182,212,.05); }
+.cmp-row:hover td.cmp-qpaix { background-color: #0B3A5C; }
+
+/* ---------- Scroll-progress timeline ---------- */
+.tl-fill { transform-origin: top; transform: scaleY(var(--tl, 0)); }
+.tl-step .tl-dot { transition: background-color .4s ease, color .4s ease, box-shadow .4s ease, transform .4s ease; }
+.tl-step.is-reached .tl-dot { background: #042439; color: #22D3EE; box-shadow: 0 0 0 6px rgba(6,182,212,.18); transform: scale(1.05); }
+
+/* ---------- Drag carousel ---------- */
+.drag-track { scrollbar-width: none; cursor: grab; scroll-snap-type: x mandatory; }
+.drag-track::-webkit-scrollbar { display: none; }
+.drag-track.is-dragging { cursor: grabbing; scroll-snap-type: none; }
+.drag-track.is-dragging a { pointer-events: none; }
+.drag-track > * { scroll-snap-align: start; }
+
+/* ---------- Industries hover-reveal list ---------- */
+.ind-row .ind-arrow { transition: transform .45s cubic-bezier(.4,0,.2,1), background-color .35s ease, color .35s ease; }
+.ind-row .ind-title { transition: transform .45s cubic-bezier(.4,0,.2,1), color .35s ease; }
+.ind-row:hover .ind-title { transform: translateX(14px); color: #0891B2; }
+.ind-row:hover .ind-arrow { transform: rotate(-45deg); background: #042439; color: #22D3EE; }
+.ind-preview {
+  position: fixed; left: 0; top: 0; z-index: 30; width: 300px; height: 210px; pointer-events: none;
+  border-radius: 1.25rem; overflow: hidden; box-shadow: 0 20px 50px rgba(4,36,57,.25);
+  opacity: 0; transform: translate(-50%, -50%) scale(.85); transition: opacity .3s ease, transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.ind-preview.is-on { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.ind-preview img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .3s ease; }
+.ind-preview img.is-active { opacity: 1; }
+@media (hover: none), (max-width: 1023px) { .ind-preview { display: none; } }
+
+/* ---------- Plans ---------- */
+.plan-card { transition: transform .45s cubic-bezier(.4,0,.2,1), box-shadow .45s ease; }
+.plan-card:hover { transform: translateY(-6px); box-shadow: 0 24px 50px rgba(4,36,57,.14); }
+
+@media (prefers-reduced-motion: reduce) {
+  .typed-caret { animation: none; }
+  .ind-row .ind-title, .ind-row .ind-arrow, .plan-card { transition: none; }
+}
