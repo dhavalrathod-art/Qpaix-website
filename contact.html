@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Qpaix – Get a Free Quote</title>
+  <meta name="description" content="Talk to Qpaix about your software, AI, cloud or drone project. Call +91 79 4605 9032, email info@qpaix.com or send us your requirements – we reply within one business day.">
+  <link rel="icon" type="image/png" href="img/Qpaix-logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js-reveal');</script>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Selectable chips (service / budget) */
+    .chip input { position: absolute; opacity: 0; pointer-events: none; }
+    .chip span { display: inline-flex; align-items: center; gap: .5rem; border: 1.5px solid #E2E8F0; background: #fff; border-radius: 999px; padding: .55rem 1rem; font-size: .875rem; font-weight: 500; color: rgba(15,23,42,.8); cursor: pointer; transition: border-color .25s, background-color .25s, color .25s; }
+    .chip span:hover { border-color: #042439; }
+    .chip input:checked + span { background: #042439; border-color: #042439; color: #fff; }
+    .chip input:focus-visible + span { box-shadow: 0 0 0 4px rgba(6,182,212,.3); }
+    .chip .chip-tick { display: none; }
+    .chip input:checked + span .chip-tick { display: inline-block; color: #22D3EE; }
+    .field.is-invalid { border-color: #F87171; box-shadow: 0 0 0 4px rgba(248,113,113,.15); }
+    .field-error { display: none; margin-top: .375rem; font-size: .8125rem; color: #DC2626; }
+    .field.is-invalid + .field-error { display: block; }
+    /* Contact card shine (same as About page) */
+    .c-card { transition: transform .45s cubic-bezier(.4,0,.2,1), box-shadow .45s ease, border-color .45s ease; }
+    .c-card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(4,36,57,.12); border-color: rgba(6,182,212,.45); }
+    @media (max-width: 425px) {
+      /* contact cards: icon on top, text below (same as About page office cards) */
+      a.c-row { flex-direction: column; align-items: flex-start; gap: .875rem; }
+    }
+  </style>
+</head>
+<!-- CONTACT page (Version 2 design: rounded header + rounded footer) -->
+<body data-page="contact" data-header="pill" class="bg-canvas">
+
+  <div id="site-header"></div>
+
+  <main id="main">
+
+    <!-- ===================== 1. BANNER ===================== -->
+    <section class="relative overflow-hidden bg-navy-950 bg-grid text-white">
+      <div class="absolute -top-40 -right-32 w-[520px] h-[520px] rounded-full bg-accent-500/20 blur-3xl"></div>
+      <div class="absolute -bottom-56 -left-40 w-[460px] h-[460px] rounded-full bg-accent-500/10 blur-3xl"></div>
+      <div class="container relative pt-32 md:pt-40 pb-32 md:pb-40">
+        <nav aria-label="Breadcrumb" class="text-sm text-navy-100">
+          <ol class="flex items-center gap-2">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li aria-hidden="true" class="text-accent-400">/</li>
+            <li aria-current="page" class="text-white font-medium">Contact Us</li>
+          </ol>
+        </nav>
+        <div class="mt-5 grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
+          <div>
+            <h1 class="text-4xl sm:text-5xl lg:text-[64px] font-extrabold tracking-tight leading-[1.05]">Let's build something <span class="text-gradient">together</span></h1>
+            <p class="mt-5 max-w-xl text-lg text-navy-100 leading-relaxed">Tell us about your idea or problem. Our team will get back to you within one business day with honest advice and next steps.</p>
+          </div>
+          <ul class="flex flex-wrap gap-2 lg:justify-end">
+            <li class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-accent-400"></span>Reply within 24 hours</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-accent-400"></span>Free consultation</li>
+            <li class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-4 py-2 text-sm"><span class="w-1.5 h-1.5 rounded-full bg-accent-400"></span>NDA on request</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. FORM + CONTACT DETAILS ===================== -->
+    <section class="relative">
+      <div class="container -mt-20 md:-mt-24 pb-20 md:pb-28 grid gap-6 lg:gap-8 lg:grid-cols-[1.45fr_1fr] items-start">
+
+        <!-- Form card -->
+        <div class="relative rounded-[2rem] bg-white border border-line shadow-lift p-6 sm:p-8 md:p-10" id="contact-form">
+          <div data-form-body>
+            <span class="eyebrow">Send us a message</span>
+            <h2 class="mt-3 text-2xl md:text-3xl font-extrabold text-navy-900 tracking-tight">Tell us about your project</h2>
+            <p class="mt-2 text-muted">Fields marked <span class="text-red-500">*</span> are required.</p>
+
+            <!-- TODO: connect this form to the backend / CRM / email when ready -->
+            <form class="mt-8 grid gap-5" novalidate data-contact-form>
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label class="field-label" for="c-name">Full name <span class="text-red-500">*</span></label>
+                  <input id="c-name" name="name" class="field" type="text" required autocomplete="name" placeholder="Your name">
+                  <p class="field-error">Please enter your name.</p>
+                </div>
+                <div>
+                  <label class="field-label" for="c-phone">Phone / WhatsApp <span class="text-red-500">*</span></label>
+                  <input id="c-phone" name="phone" class="field" type="tel" required autocomplete="tel" placeholder="+91 98765 43210" pattern="[0-9+\s\-]{10,15}">
+                  <p class="field-error">Please enter a valid phone number.</p>
+                </div>
+                <div>
+                  <label class="field-label" for="c-email">Email <span class="text-red-500">*</span></label>
+                  <input id="c-email" name="email" class="field" type="email" required autocomplete="email" placeholder="you@company.com">
+                  <p class="field-error">Please enter a valid email address.</p>
+                </div>
+                <div>
+                  <label class="field-label" for="c-company">Company name</label>
+                  <input id="c-company" name="company" class="field" type="text" autocomplete="organization" placeholder="Your company (optional)">
+                </div>
+              </div>
+
+              <fieldset>
+                <legend class="field-label">What do you need help with?</legend>
+                <div class="mt-1 flex flex-wrap gap-2">
+                  <label class="chip relative"><input type="checkbox" name="service" value="Software Development"><span><svg class="chip-tick w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Software Development</span></label>
+                  <label class="chip relative"><input type="checkbox" name="service" value="Enterprise AI"><span><svg class="chip-tick w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Enterprise AI</span></label>
+                  <label class="chip relative"><input type="checkbox" name="service" value="Data Analytics"><span><svg class="chip-tick w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Data Analytics</span></label>
+                  <label class="chip relative"><input type="checkbox" name="service" value="Cloud Services"><span><svg class="chip-tick w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Cloud Services</span></label>
+                  <label class="chip relative"><input type="checkbox" name="service" value="IoT Solutions"><span><svg class="chip-tick w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>IoT Solutions</span></label>
+                  <label class="chip relative"><input type="checkbox" name="service" value="Drone Services"><span><svg class="chip-tick w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Drone Services</span></label>
+                  <label class="chip relative"><input type="checkbox" name="service" value="IT Consulting & Security"><span><svg class="chip-tick w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>IT Consulting &amp; Security</span></label>
+                  <label class="chip relative"><input type="checkbox" name="service" value="Not sure yet"><span><svg class="chip-tick w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Not sure yet</span></label>
+                </div>
+              </fieldset>
+
+              <div class="grid gap-5 sm:grid-cols-2">
+                <fieldset>
+                  <legend class="field-label">Approximate budget</legend>
+                  <div class="mt-1 flex flex-wrap gap-2">
+                    <label class="chip relative"><input type="radio" name="budget" value="Under ₹2L"><span>Under ₹2L</span></label>
+                    <label class="chip relative"><input type="radio" name="budget" value="₹2–10L"><span>₹2–10L</span></label>
+                    <label class="chip relative"><input type="radio" name="budget" value="₹10L+"><span>₹10L+</span></label>
+                    <label class="chip relative"><input type="radio" name="budget" value="Not decided"><span>Not decided</span></label>
+                  </div>
+                </fieldset>
+                <div>
+                  <label class="field-label" for="c-timeline">When do you want to start?</label>
+                  <select id="c-timeline" name="timeline" class="field">
+                    <option value="">Select a timeline</option>
+                    <option>As soon as possible</option>
+                    <option>Within 1 month</option>
+                    <option>In 1–3 months</option>
+                    <option>Just exploring</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="field-label" for="c-message">Project details <span class="text-red-500">*</span></label>
+                <textarea id="c-message" name="message" class="field min-h-[140px] resize-y" required minlength="10" placeholder="Tell us what you want to build, the problem you want to solve, or any questions you have."></textarea>
+                <p class="field-error">Please add a few words about your project.</p>
+              </div>
+
+              <div class="grid gap-5 sm:grid-cols-2 sm:items-end">
+                <div>
+                  <label class="field-label" for="c-source">How did you hear about us?</label>
+                  <select id="c-source" name="source" class="field">
+                    <option value="">Select an option</option>
+                    <option>Google search</option>
+                    <option>LinkedIn</option>
+                    <option>Instagram / Facebook</option>
+                    <option>Friend or referral</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <label class="flex items-start gap-3 text-sm text-muted cursor-pointer">
+                  <input type="checkbox" name="nda" class="mt-0.5 w-4 h-4 rounded border-line accent-[#042439]">
+                  <span>I'd like to sign an NDA before sharing more details.</span>
+                </label>
+              </div>
+
+              <div class="pt-2 flex flex-wrap items-center justify-between gap-4 border-t border-line">
+                <p class="flex items-center gap-2 text-xs text-muted pt-4">
+                  <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                  Your details stay private and are never shared.
+                </p>
+                <button type="submit" class="btn btn-primary btn-pill pl-6 pr-1.5 py-1.5 group mt-4">
+                  Send message
+                  <span class="w-9 h-9 rounded-full bg-accent-500 text-navy-950 grid place-items-center transition-transform duration-500 group-hover:rotate-[-45deg]"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Success message -->
+          <div class="py-10 text-center" data-form-success hidden tabindex="-1">
+            <span class="mx-auto w-20 h-20 rounded-full bg-emerald-50 text-emerald-600 grid place-items-center">
+              <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <h2 class="mt-6 text-2xl md:text-3xl font-extrabold text-navy-900">Thank you, <span data-success-name>there</span>!</h2>
+            <p class="mt-3 max-w-md mx-auto text-muted">We've received your message. Someone from our team will call or email you within one business day.</p>
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+              <a href="index.html" class="btn btn-outline btn-pill">Back to home</a>
+              <a href="https://wa.me/917946059032" target="_blank" rel="noopener" class="btn btn-accent btn-pill">Chat on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column -->
+        <div class="grid gap-6 lg:sticky lg:top-28">
+          <!-- Contact cards -->
+          <ul class="grid gap-3">
+            <li>
+              <a href="tel:+917946059032" class="c-card c-row group flex items-center gap-4 rounded-[1.5rem] bg-white border border-line p-5">
+                <span class="icon-fill w-12 h-12 shrink-0 rounded-2xl bg-accent-50 text-accent-600 grid place-items-center"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                <span class="min-w-0"><span class="block text-xs text-muted">Call us</span><span class="block font-semibold text-navy-900">+91 79 4605 9032</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@qpaix.com" class="c-card c-row group flex items-center gap-4 rounded-[1.5rem] bg-white border border-line p-5">
+                <span class="icon-fill w-12 h-12 shrink-0 rounded-2xl bg-accent-50 text-accent-600 grid place-items-center"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                <span class="min-w-0"><span class="block text-xs text-muted">Email us</span><span class="block font-semibold text-navy-900">info@qpaix.com</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/917946059032" target="_blank" rel="noopener" class="c-card c-row group flex items-center gap-4 rounded-[1.5rem] bg-white border border-line p-5">
+                <span class="w-12 h-12 shrink-0 rounded-2xl bg-[#25D366]/10 text-[#1EBE5A] grid place-items-center transition-colors group-hover:bg-[#25D366] group-hover:text-white"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.49-8.41z"/></svg></span>
+                <span class="min-w-0"><span class="block text-xs text-muted">WhatsApp</span><span class="block font-semibold text-navy-900">Chat with our team</span></span>
+              </a>
+            </li>
+            <li>
+              <a href="https://maps.google.com/?q=D%26C+Dynasty+Navrangpura+Ahmedabad" target="_blank" rel="noopener" class="c-card c-row group flex items-start gap-4 rounded-[1.5rem] bg-white border border-line p-5">
+                <span class="icon-fill w-12 h-12 shrink-0 rounded-2xl bg-accent-50 text-accent-600 grid place-items-center"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+                <span class="min-w-0"><span class="block text-xs text-muted">Visit our office</span><span class="block font-semibold text-navy-900 leading-snug">14th Floor, D&amp;C Dynasty, Near Stadium Circle, C.G. Road, Navrangpura, Ahmedabad 380009</span></span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- What happens next -->
+          <div class="relative overflow-hidden rounded-[2rem] bg-navy-900 bg-grid text-white p-7 md:p-8">
+            <div class="absolute -top-20 -right-20 w-56 h-56 rounded-full bg-accent-500/20 blur-3xl"></div>
+            <p class="relative font-heading text-xl font-extrabold">What happens next?</p>
+            <ol class="relative mt-6 space-y-5">
+              <li class="flex gap-4">
+                <span class="w-9 h-9 shrink-0 rounded-full bg-accent-500 text-navy-950 grid place-items-center font-heading text-sm font-extrabold">1</span>
+                <span><span class="block font-semibold">We reply within 24 hours</span><span class="block text-sm text-navy-200 mt-0.5">A real person reads your message, no bots.</span></span>
+              </li>
+              <li class="flex gap-4">
+                <span class="w-9 h-9 shrink-0 rounded-full bg-white/10 text-accent-300 grid place-items-center font-heading text-sm font-extrabold">2</span>
+                <span><span class="block font-semibold">Free 30-minute call</span><span class="block text-sm text-navy-200 mt-0.5">We understand your goals and suggest the best approach.</span></span>
+              </li>
+              <li class="flex gap-4">
+                <span class="w-9 h-9 shrink-0 rounded-full bg-white/10 text-accent-300 grid place-items-center font-heading text-sm font-extrabold">3</span>
+                <span><span class="block font-semibold">Clear proposal &amp; quote</span><span class="block text-sm text-navy-200 mt-0.5">Scope, timeline and cost in writing, with no obligation.</span></span>
+              </li>
+            </ol>
+            <p class="relative mt-7 pt-6 border-t border-white/10 flex items-center gap-2 text-sm text-navy-100">
+              <svg class="w-4 h-4 text-accent-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Mon – Sat, 10:00 AM – 7:00 PM
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 3. MAP ===================== -->
+    <section class="px-3 sm:px-4">
+      <div class="relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] bg-white border border-line h-[420px] md:h-[480px]">
+        <iframe title="Qpaix office location on Google Maps" src="https://maps.google.com/maps?q=D%26C%20Dynasty%2C%20Navrangpura%2C%20Ahmedabad&z=16&output=embed" class="absolute inset-0 w-full h-full" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="absolute left-4 right-4 bottom-4 sm:left-6 sm:right-auto sm:bottom-6 sm:max-w-sm rounded-[1.5rem] bg-white shadow-lift p-5">
+          <p class="font-heading text-lg font-extrabold text-navy-900">Qpaix Infitech Pvt. Ltd.</p>
+          <p class="mt-1 text-sm text-muted">14th Floor, D&amp;C Dynasty, Near Stadium Circle, C.G. Road, Navrangpura, Ahmedabad, Gujarat 380009</p>
+          <a href="https://maps.google.com/?q=D%26C+Dynasty+Navrangpura+Ahmedabad" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy-900 hover:text-accent-600">
+            Get directions
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 4. FAQ ===================== -->
+    <section>
+      <div class="container py-20 md:py-28 grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div class="lg:sticky lg:top-28 self-start" data-reveal>
+          <span class="eyebrow">Before you write</span>
+          <h2 class="mt-4 text-3xl md:text-[44px] font-extrabold text-navy-900 tracking-tight leading-[1.1]">Common questions</h2>
+          <p class="mt-4 text-lg text-muted">Still unsure? Just send the form with your question. There's no wrong question.</p>
+        </div>
+        <div class="space-y-3">
+          <details class="faq rounded-[1.5rem] bg-white border border-line" data-reveal>
+            <summary class="flex items-center justify-between gap-4 p-5 md:p-6 font-semibold text-navy-900">Is the first consultation really free?
+              <span class="faq-icon shrink-0 w-9 h-9 rounded-full bg-canvas grid place-items-center text-lg transition-transform">+</span></summary>
+            <p class="px-5 md:px-6 pb-6 -mt-1 text-muted leading-relaxed">Yes. The first 30-minute call is completely free and comes with no obligation. We use it to understand your needs and tell you honestly if and how we can help.</p>
+          </details>
+          <details class="faq rounded-[1.5rem] bg-white border border-line" data-reveal>
+            <summary class="flex items-center justify-between gap-4 p-5 md:p-6 font-semibold text-navy-900">I don't have a technical team. Can you still help?
+              <span class="faq-icon shrink-0 w-9 h-9 rounded-full bg-canvas grid place-items-center text-lg transition-transform">+</span></summary>
+            <p class="px-5 md:px-6 pb-6 -mt-1 text-muted leading-relaxed">Absolutely. Most of our clients are business owners, not engineers. We explain everything in simple language and handle all the technical work for you.</p>
+          </details>
+          <details class="faq rounded-[1.5rem] bg-white border border-line" data-reveal>
+            <summary class="flex items-center justify-between gap-4 p-5 md:p-6 font-semibold text-navy-900">Will my idea stay confidential?
+              <span class="faq-icon shrink-0 w-9 h-9 rounded-full bg-canvas grid place-items-center text-lg transition-transform">+</span></summary>
+            <p class="px-5 md:px-6 pb-6 -mt-1 text-muted leading-relaxed">Yes. We're happy to sign an NDA before you share details. Just tick the NDA box in the form and we'll send one across first.</p>
+          </details>
+          <details class="faq rounded-[1.5rem] bg-white border border-line" data-reveal>
+            <summary class="flex items-center justify-between gap-4 p-5 md:p-6 font-semibold text-navy-900">Do you work with clients outside Ahmedabad?
+              <span class="faq-icon shrink-0 w-9 h-9 rounded-full bg-canvas grid place-items-center text-lg transition-transform">+</span></summary>
+            <p class="px-5 md:px-6 pb-6 -mt-1 text-muted leading-relaxed">Yes, we work with businesses across India. Most meetings happen on video calls, and we visit on site whenever the project needs it.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Contact form: simple front-end validation + thank-you message (no backend yet)
+    (function () {
+      const form = document.querySelector('[data-contact-form]');
+      if (!form) return;
+      const required = form.querySelectorAll('[required]');
+      const check = (el) => {
+        const ok = el.checkValidity() && el.value.trim().length > 0;
+        el.classList.toggle('is-invalid', !ok);
+        el.setAttribute('aria-invalid', String(!ok));
+        return ok;
+      };
+      required.forEach((el) => {
+        el.addEventListener('blur', () => { if (el.value) check(el); });
+        el.addEventListener('input', () => { if (el.classList.contains('is-invalid')) check(el); });
+      });
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let firstBad = null;
+        required.forEach((el) => { if (!check(el) && !firstBad) firstBad = el; });
+        if (firstBad) { firstBad.focus(); return; }
+        // TODO: send the data to the backend here, e.g. fetch('/api/contact', { method: 'POST', body: new FormData(form) })
+        const name = form.querySelector('#c-name').value.trim().split(' ')[0];
+        document.querySelector('[data-success-name]').textContent = name || 'there';
+        document.querySelector('[data-form-body]').hidden = true;
+        const done = document.querySelector('[data-form-success]');
+        done.hidden = false;
+        done.focus();
+        document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+  </script>
+</body>
+</html>

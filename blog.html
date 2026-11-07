@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Qpaix – Insights on Software, AI &amp; Cloud</title>
+  <meta name="description" content="Practical articles on software, AI, cloud, data, IoT and drones for growing Indian businesses, written by the Qpaix team.">
+  <link rel="icon" type="image/png" href="img/Qpaix-logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <script>document.documentElement.classList.add('js-reveal');</script>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<!-- BLOG LIST page (Version 2 design). Posts come from the admin panel later; this is the HTML template. -->
+<body data-page="blog" data-header="pill" class="bg-canvas">
+
+  <div id="site-header"></div>
+
+  <main id="main">
+
+    <!-- ===================== 1. BANNER ===================== -->
+    <section class="relative overflow-hidden bg-navy-950 bg-grid text-white">
+      <div class="absolute -top-40 -right-32 w-[520px] h-[520px] rounded-full bg-accent-500/20 blur-3xl"></div>
+      <div class="container relative pt-32 md:pt-40 pb-28 md:pb-32">
+        <nav aria-label="Breadcrumb" class="text-sm text-navy-100">
+          <ol class="flex items-center gap-2">
+            <li><a href="index.html" class="hover:text-white">Home</a></li>
+            <li aria-hidden="true" class="text-accent-400">/</li>
+            <li aria-current="page" class="text-white font-medium">Blog</li>
+          </ol>
+        </nav>
+        <div class="mt-5 grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end">
+          <div>
+            <h1 class="text-4xl sm:text-5xl lg:text-[64px] font-extrabold tracking-tight leading-[1.05]">Insights for <span class="text-gradient">growing businesses</span></h1>
+            <p class="mt-5 max-w-xl text-lg text-navy-100 leading-relaxed">Practical, jargon-free articles on software, AI, cloud and data, written by the people who build them.</p>
+          </div>
+          <label class="relative block lg:max-w-sm lg:ml-auto w-full">
+            <span class="sr-only">Search articles</span>
+            <span class="absolute left-5 top-1/2 -translate-y-1/2 text-navy-200"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+            <input type="search" placeholder="Search articles…" class="w-full rounded-full bg-white/10 border border-white/15 pl-12 pr-5 py-3.5 text-white placeholder:text-navy-200 outline-none focus:border-accent-400 focus:bg-white/15 transition" data-blog-search>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 2. FEATURED POST ===================== -->
+    <!-- admin: the post marked "featured" -->
+    <section>
+      <div class="container -mt-16 md:-mt-20 relative">
+        <a href="blog/ai-for-small-business.html" class="group grid lg:grid-cols-[1.15fr_1fr] rounded-[2rem] bg-white border border-line shadow-lift overflow-hidden p-2.5">
+          <div class="relative rounded-[1.5rem] overflow-hidden aspect-[16/10] lg:aspect-auto lg:min-h-[400px]">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1100&q=75&auto=format&fit=crop" alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+            <span class="shine absolute inset-0" aria-hidden="true"></span>
+            <span class="badge absolute left-4 top-4 bg-accent-500 text-navy-950">Featured</span>
+          </div>
+          <div class="p-6 md:p-10 flex flex-col">
+            <span class="badge badge-navy self-start">AI</span>
+            <h2 class="mt-4 text-2xl md:text-[34px] font-extrabold text-navy-900 tracking-tight leading-tight transition-colors group-hover:text-accent-600">How Indian SMEs can start using AI without a big budget</h2>
+            <p class="mt-4 text-muted text-lg leading-relaxed">Three practical AI projects that pay back in months, not years, and how to pick the first one for your business.</p>
+            <div class="mt-auto pt-8 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=75&auto=format&fit=crop&h=100&crop=faces" alt="" class="w-11 h-11 rounded-full object-cover">
+                <span><span class="block text-sm font-semibold text-navy-900">Sahil Bhavsar</span><span class="block text-xs text-muted">4 Nov 2026 · 5 min read</span></span>
+              </div>
+              <span class="w-12 h-12 rounded-full bg-navy-900 text-accent-400 grid place-items-center transition-transform duration-500 group-hover:rotate-[-45deg]"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===================== 3. CATEGORY FILTER + GRID ===================== -->
+    <section>
+      <div class="container py-16 md:py-20" data-blog>
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <span class="eyebrow">All articles</span>
+            <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-navy-900 tracking-tight">Latest from the team</h2>
+          </div>
+          <!-- admin: categories -->
+          <div class="no-scrollbar flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 sm:mx-0 sm:px-0 max-w-full" role="tablist" aria-label="Filter by category">
+            <button type="button" role="tab" aria-selected="true" data-blog-cat="All" class="blog-chip shrink-0">All<span class="ml-1.5 text-xs opacity-60">9</span></button>
+            <button type="button" role="tab" aria-selected="false" data-blog-cat="AI" class="blog-chip shrink-0">AI<span class="ml-1.5 text-xs opacity-60">1</span></button>
+            <button type="button" role="tab" aria-selected="false" data-blog-cat="Software" class="blog-chip shrink-0">Software<span class="ml-1.5 text-xs opacity-60">2</span></button>
+            <button type="button" role="tab" aria-selected="false" data-blog-cat="Drones" class="blog-chip shrink-0">Drones<span class="ml-1.5 text-xs opacity-60">1</span></button>
+            <button type="button" role="tab" aria-selected="false" data-blog-cat="Cloud" class="blog-chip shrink-0">Cloud<span class="ml-1.5 text-xs opacity-60">1</span></button>
+            <button type="button" role="tab" aria-selected="false" data-blog-cat="Data" class="blog-chip shrink-0">Data<span class="ml-1.5 text-xs opacity-60">1</span></button>
+            <button type="button" role="tab" aria-selected="false" data-blog-cat="Guides" class="blog-chip shrink-0">Guides<span class="ml-1.5 text-xs opacity-60">1</span></button>
+            <button type="button" role="tab" aria-selected="false" data-blog-cat="IoT" class="blog-chip shrink-0">IoT<span class="ml-1.5 text-xs opacity-60">1</span></button>
+            <button type="button" role="tab" aria-selected="false" data-blog-cat="Design" class="blog-chip shrink-0">Design<span class="ml-1.5 text-xs opacity-60">1</span></button>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:gap-6 sm:grid-cols-2 lg:grid-cols-3" data-blog-grid>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="AI" data-title="how indian smes can start using ai without a big budget">
+            <a href="blog/ai-for-small-business.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">AI</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-11-04">4 Nov 2026</time> · 5 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">How Indian SMEs can start using AI without a big budget</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">Three practical AI projects that pay back in months, not years, and how to pick the first one for your business.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Sahil Bhavsar</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="Software" data-title="custom software or ready-made saas: which is right for you?">
+            <a href="blog/custom-software-vs-saas.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">Software</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-10-29">29 Oct 2026</time> · 6 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">Custom software or ready-made SaaS: which is right for you?</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">A simple checklist to decide before you spend money, with real examples from Indian businesses.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Shruten Parmar</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="Drones" data-title="5 ways drones are changing agriculture in gujarat">
+            <a href="blog/drones-in-agriculture.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">Drones</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-10-22">22 Oct 2026</time> · 4 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">5 ways drones are changing agriculture in Gujarat</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">From crop spraying to land mapping, here is what is actually working on the ground for farmers today.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Darshan Ranpariya</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="Cloud" data-title="7 simple ways to cut your monthly cloud bill">
+            <a href="blog/cloud-cost-tips.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">Cloud</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-10-15">15 Oct 2026</time> · 5 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">7 simple ways to cut your monthly cloud bill</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">Most businesses overpay for AWS and Azure. These seven quick checks usually save 20–40% without any downtime.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Hiten Jadavra</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="Data" data-title="why every growing business needs one live dashboard">
+            <a href="blog/data-dashboards-for-sme.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">Data</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-10-08">8 Oct 2026</time> · 4 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">Why every growing business needs one live dashboard</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">Stop waiting for monthly reports. A single live dashboard shows sales, stock and cash flow at a glance.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Priya Mistri</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="Guides" data-title="10 questions to ask before hiring a software company">
+            <a href="blog/hiring-a-software-partner.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">Guides</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-10-01">1 Oct 2026</time> · 6 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">10 questions to ask before hiring a software company</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">Ask these before you sign anything. The answers will tell you more than any portfolio ever can.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Savan Aghera</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="IoT" data-title="how iot sensors reduce machine downtime in factories">
+            <a href="blog/iot-in-manufacturing.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">IoT</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-09-24">24 Sept 2026</time> · 5 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">How IoT sensors reduce machine downtime in factories</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">Small sensors, big savings: how live machine data helps factories fix problems before they stop production.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Rinkal Rathod</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="Design" data-title="website redesign checklist for 2026">
+            <a href="blog/website-redesign-checklist.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">Design</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-09-17">17 Sept 2026</time> · 5 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">Website redesign checklist for 2026</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">Speed, mobile, trust and clear calls to action: the 12 things to check before you redesign your website.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Dhaval Rathod</span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <!-- BLOG CARD · admin fields: slug, category, cover_image, title, excerpt, published_date, read_time, author -->
+          <article class="blog-card group" data-category="Software" data-title="why testing before launch saves you money">
+            <a href="blog/testing-before-launch.html" class="flex flex-col h-full rounded-[1.75rem] bg-white border border-line p-2.5 transition duration-500 hover:-translate-y-1 hover:shadow-lift hover:border-accent-500/40">
+              <div class="relative rounded-[1.35rem] overflow-hidden aspect-[16/10] bg-navy-50">
+                <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=700&q=75&auto=format&fit=crop" alt="" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" loading="lazy">
+                <span class="shine absolute inset-0" aria-hidden="true"></span>
+                <span class="badge absolute left-3 top-3 bg-white text-navy-900">Software</span>
+              </div>
+              <div class="flex flex-col flex-1 px-3 pt-5 pb-3">
+                <p class="text-xs text-muted"><time datetime="2026-09-10">10 Sept 2026</time> · 4 min read</p>
+                <h3 class="mt-2 text-lg font-bold text-navy-900 leading-snug transition-colors group-hover:text-accent-600">Why testing before launch saves you money</h3>
+                <p class="mt-2 text-sm text-muted leading-relaxed line-clamp-2">Every bug found after launch costs up to ten times more to fix. Here is how a QA team protects your budget.</p>
+                <div class="mt-auto pt-5 flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=80&q=75&auto=format&fit=crop&h=80&crop=faces" alt="" class="w-8 h-8 rounded-full object-cover" loading="lazy">
+                  <span class="text-sm font-medium text-ink/80">Avinash Chauhan</span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <div class="hidden mt-10 rounded-[2rem] bg-white border border-line p-10 text-center" data-blog-empty>
+          <p class="font-heading text-xl font-bold text-navy-900">No articles found</p>
+          <p class="mt-2 text-muted">Try another word or choose a different category.</p>
+        </div>
+
+        <!-- admin: pagination (static for now) -->
+        <nav class="mt-12 flex items-center justify-center gap-2" aria-label="Pagination">
+          <span class="w-11 h-11 rounded-full bg-navy-900 text-white grid place-items-center font-semibold" aria-current="page">1</span>
+          <a href="#" class="w-11 h-11 rounded-full bg-white border border-line text-navy-900 grid place-items-center font-semibold hover:border-navy-900 transition-colors">2</a>
+          <a href="#" class="w-11 h-11 rounded-full bg-white border border-line text-navy-900 grid place-items-center font-semibold hover:border-navy-900 transition-colors">3</a>
+          <a href="#" class="h-11 px-5 rounded-full bg-white border border-line text-navy-900 inline-flex items-center gap-2 font-semibold hover:border-navy-900 transition-colors">Next <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </nav>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

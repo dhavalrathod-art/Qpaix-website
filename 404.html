@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coming Soon | Qpaix</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="/img/Qpaix-logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Absolute paths: Vercel serves this file for every page that does not exist yet, at any URL depth -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="/js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    /* Illustration animations */
+    .cs-gear { transform-box: fill-box; transform-origin: center; animation: cs-spin 9s linear infinite; }
+    .cs-gear-rev { animation-direction: reverse; animation-duration: 6s; }
+    .cs-rocket { animation: cs-float 3.2s ease-in-out infinite; }
+    .cs-flame { transform-box: fill-box; transform-origin: top center; animation: cs-flame .35s ease-in-out infinite alternate; }
+    .cs-bar { animation: cs-load 3.5s cubic-bezier(.4,0,.2,1) infinite; }
+    .cs-twinkle { animation: cs-twinkle 2.4s ease-in-out infinite; }
+    .cs-twinkle:nth-of-type(2n) { animation-delay: -1.2s; }
+    @keyframes cs-spin { to { transform: rotate(360deg); } }
+    @keyframes cs-float { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-6px,-12px); } }
+    @keyframes cs-flame { from { transform: scaleY(.8); opacity: .8; } to { transform: scaleY(1.15); opacity: 1; } }
+    @keyframes cs-load { 0% { width: 20px; } 60%,100% { width: 190px; } }
+    @keyframes cs-twinkle { 0%,100% { opacity: .25; } 50% { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .cs-gear, .cs-rocket, .cs-flame, .cs-bar, .cs-twinkle { animation: none; } }
+  </style>
+</head>
+<!-- COMING SOON page (Version 2 design). Shown for every page that is not built yet. -->
+<body data-header="pill">
+
+  <div id="site-header"></div>
+
+  <main id="main" class="bg-canvas">
+    <section class="relative overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-accent-300/25 blur-3xl"></div>
+      <div class="absolute -bottom-48 -left-40 w-[460px] h-[460px] rounded-full bg-navy-200/40 blur-3xl"></div>
+
+      <div class="container relative pt-32 md:pt-40 pb-16 md:pb-24 grid gap-12 lg:grid-cols-2 lg:items-center">
+        <!-- Text -->
+        <div class="order-2 lg:order-1">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white border border-line shadow-card px-4 py-1.5 text-sm font-semibold text-navy-900">
+            <span class="relative flex w-2 h-2"><span class="absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75 animate-ping"></span><span class="relative inline-flex rounded-full w-2 h-2 bg-accent-500"></span></span>
+            We're building something great
+          </span>
+          <h1 class="mt-6 text-4xl sm:text-5xl lg:text-[60px] font-extrabold text-navy-900 tracking-tight leading-[1.05]">
+            <span data-cs-page>This page</span> is<br><span class="text-accent-600">coming soon</span>
+          </h1>
+          <p class="mt-6 max-w-lg text-lg text-muted leading-relaxed">Our team is putting the final touches on this page. In the meantime, we're just a call or message away and happy to talk about your project.</p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="/" class="btn btn-primary btn-pill pl-6 pr-1.5 py-1.5 group">
+              Back to home
+              <span class="w-9 h-9 rounded-full bg-accent-500 text-navy-950 grid place-items-center transition-transform duration-500 group-hover:rotate-[-45deg]">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </span>
+            </a>
+            <a href="https://wa.me/917946059032" target="_blank" rel="noopener" class="btn btn-outline btn-pill">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88zm8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.31-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.16-3.49-8.41z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+
+          <!-- Notify me (front-end only for now) -->
+          <div class="mt-10 max-w-md">
+            <p class="text-sm font-semibold text-navy-900">Get notified when it's live</p>
+            <!-- TODO: connect to the backend / email service -->
+            <form class="mt-3 flex items-center gap-1 rounded-full bg-white border border-line shadow-card p-1.5 focus-within:border-accent-500 transition-colors" data-cs-notify>
+              <label for="cs-email" class="sr-only">Email address</label>
+              <input id="cs-email" type="email" required placeholder="Your email address" class="min-w-0 flex-1 bg-transparent px-4 py-2 text-sm text-ink placeholder:text-muted outline-none">
+              <button type="submit" class="btn btn-accent btn-sm btn-pill">Notify me</button>
+            </form>
+            <p class="mt-2 text-sm font-medium text-emerald-600" data-cs-thanks hidden>Thanks! We'll email you as soon as it's ready.</p>
+          </div>
+
+          <!-- Quick contact -->
+          <div class="mt-10 grid sm:grid-cols-2 gap-3 max-w-lg">
+            <a href="tel:+917946059032" class="group flex items-center gap-3 rounded-2xl bg-white border border-line p-4 hover:border-accent-500/50 hover:shadow-card transition">
+              <span class="w-10 h-10 shrink-0 rounded-full bg-accent-50 text-accent-600 grid place-items-center transition-colors group-hover:bg-navy-900 group-hover:text-accent-400">
+                <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span><span class="block text-xs text-muted">Call us</span><span class="block text-sm font-semibold text-navy-900">+91 79 4605 9032</span></span>
+            </a>
+            <a href="mailto:info@qpaix.com" class="group flex items-center gap-3 rounded-2xl bg-white border border-line p-4 hover:border-accent-500/50 hover:shadow-card transition">
+              <span class="w-10 h-10 shrink-0 rounded-full bg-accent-50 text-accent-600 grid place-items-center transition-colors group-hover:bg-navy-900 group-hover:text-accent-400">
+                <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              </span>
+              <span><span class="block text-xs text-muted">Email us</span><span class="block text-sm font-semibold text-navy-900">info@qpaix.com</span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Illustration -->
+        <div class="order-1 lg:order-2">
+          <svg class="w-full max-w-[560px] mx-auto h-auto" viewBox="0 0 560 480" role="img" aria-labelledby="cs-illus-title">
+            <title id="cs-illus-title">Illustration of a website being built: a browser window with gears, a loading bar and a rocket taking off</title>
+            <defs>
+              <linearGradient id="cs-g-cyan" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#0891B2"/></linearGradient>
+              <linearGradient id="cs-g-flame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FDE68A"/><stop offset=".55" stop-color="#F59E0B"/><stop offset="1" stop-color="#F97316" stop-opacity="0"/></linearGradient>
+              <pattern id="cs-stripes" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="12" height="24" fill="#042439"/><rect x="12" width="12" height="24" fill="#22D3EE"/></pattern>
+              <filter id="cs-shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#042439" flood-opacity=".16"/></filter>
+            </defs>
+
+            <!-- background shapes -->
+            <circle cx="290" cy="250" r="190" fill="#ECFEFF"/>
+            <circle cx="290" cy="250" r="140" fill="#CFFAFE" opacity=".55"/>
+            <g fill="#06B6D4">
+              <circle class="cs-twinkle" cx="78" cy="96" r="4"/>
+              <circle class="cs-twinkle" cx="498" cy="372" r="5"/>
+              <circle class="cs-twinkle" cx="120" cy="404" r="3"/>
+              <circle class="cs-twinkle" cx="470" cy="70" r="3"/>
+            </g>
+            <g fill="#042439" opacity=".18">
+              <circle cx="60" cy="300" r="3"/><circle cx="76" cy="300" r="3"/><circle cx="92" cy="300" r="3"/>
+              <circle cx="60" cy="316" r="3"/><circle cx="76" cy="316" r="3"/><circle cx="92" cy="316" r="3"/>
+            </g>
+
+            <!-- browser window -->
+            <g filter="url(#cs-shadow)">
+              <rect x="90" y="110" width="380" height="270" rx="22" fill="#fff"/>
+            </g>
+            <rect x="90" y="110" width="380" height="270" rx="22" fill="none" stroke="#E2E8F0" stroke-width="2"/>
+            <path d="M90 132a22 22 0 0 1 22-22h336a22 22 0 0 1 22 22v18H90z" fill="#042439"/>
+            <circle cx="116" cy="130" r="5.5" fill="#F87171"/><circle cx="134" cy="130" r="5.5" fill="#FBBF24"/><circle cx="152" cy="130" r="5.5" fill="#34D399"/>
+            <rect x="180" y="123" width="200" height="14" rx="7" fill="#0B3A5C"/>
+
+            <!-- page skeleton -->
+            <rect x="118" y="176" width="150" height="16" rx="8" fill="#042439"/>
+            <rect x="118" y="202" width="210" height="10" rx="5" fill="#D6E3EC"/>
+            <rect x="118" y="220" width="180" height="10" rx="5" fill="#D6E3EC"/>
+            <rect x="118" y="246" width="88" height="28" rx="14" fill="url(#cs-g-cyan)"/>
+            <rect x="214" y="246" width="70" height="28" rx="14" fill="none" stroke="#042439" stroke-width="2"/>
+
+            <!-- loading bar -->
+            <text x="118" y="306" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#64748B">Building page…</text>
+            <rect x="118" y="316" width="190" height="10" rx="5" fill="#EEF4F8"/>
+            <rect class="cs-bar" x="118" y="316" width="120" height="10" rx="5" fill="url(#cs-g-cyan)"/>
+
+            <!-- construction stripe -->
+            <path d="M90 346h380v12a22 22 0 0 1-22 22H112a22 22 0 0 1-22-22z" fill="url(#cs-stripes)"/>
+
+            <!-- big gear -->
+            <g class="cs-gear">
+              <circle cx="392" cy="236" r="46" fill="none" stroke="#042439" stroke-width="18" stroke-dasharray="14 10.1"/>
+              <circle cx="392" cy="236" r="36" fill="#042439"/>
+              <circle cx="392" cy="236" r="13" fill="#fff"/>
+            </g>
+            <!-- small gear -->
+            <g class="cs-gear cs-gear-rev">
+              <circle cx="448" cy="300" r="24" fill="none" stroke="#06B6D4" stroke-width="12" stroke-dasharray="9 6.7"/>
+              <circle cx="448" cy="300" r="18" fill="#06B6D4"/>
+              <circle cx="448" cy="300" r="7" fill="#fff"/>
+            </g>
+
+            <!-- rocket -->
+            <g class="cs-rocket">
+              <g transform="translate(470 40) rotate(35)">
+                <path class="cs-flame" d="M-12 70 Q0 118 12 70 Z" fill="url(#cs-g-flame)"/>
+                <path d="M0 -40 C22 -18 24 30 16 70 H-16 C-24 30 -22 -18 0 -40 Z" fill="#fff" stroke="#042439" stroke-width="3"/>
+                <path d="M0 -40 C10 -30 15 -18 17 -6 H-17 C-15 -18 -10 -30 0 -40 Z" fill="#042439"/>
+                <circle cx="0" cy="14" r="10" fill="#22D3EE" stroke="#042439" stroke-width="3"/>
+                <path d="M-16 40 L-34 66 L-16 62 Z" fill="#06B6D4" stroke="#042439" stroke-width="3" stroke-linejoin="round"/>
+                <path d="M16 40 L34 66 L16 62 Z" fill="#06B6D4" stroke="#042439" stroke-width="3" stroke-linejoin="round"/>
+              </g>
+            </g>
+
+            <!-- floating chips -->
+            <g transform="translate(36 182)">
+              <rect width="118" height="44" rx="22" fill="#fff" stroke="#E2E8F0" stroke-width="2"/>
+              <circle cx="22" cy="22" r="11" fill="#ECFEFF"/>
+              <path d="M17 22l4 4 7-8" fill="none" stroke="#0891B2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="40" y="27" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#042439">Design</text>
+            </g>
+            <g transform="translate(408 404)">
+              <rect width="124" height="44" rx="22" fill="#042439"/>
+              <circle cx="22" cy="22" r="11" fill="#0B3A5C"/>
+              <circle cx="22" cy="22" r="4" fill="#22D3EE"/>
+              <text x="40" y="27" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#fff">In progress</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/components.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    // Show the name of the page the visitor was looking for
+    (function () {
+      const names = {
+        'about': 'About Us', 'services': 'Our Services', 'industries': 'Industries', 'portfolio': 'Our Portfolio',
+        'blog': 'Our Blog', 'careers': 'Careers', 'team': 'Life at Qpaix', 'contact': 'Contact Us',
+        'privacy-policy': 'Privacy Policy', 'terms': 'Terms & Conditions',
+        'software-development': 'Software Development', 'enterprise-ai': 'Enterprise AI', 'data-analytics': 'Data Analytics',
+        'cloud-services': 'Cloud Services', 'iot-solutions': 'IoT Solutions', 'drone-services': 'Drone Services',
+        'it-consulting': 'IT Consulting', 'coming-soon': 'This page',
+      };
+      const path = location.pathname.replace(/\/+$/, '');
+      const slug = path.split('/').pop().replace(/\.html$/, '');
+      const name = names[slug] || (path.startsWith('/blog/') ? 'This article' : 'This page');
+      document.querySelector('[data-cs-page]').textContent = name;
+      if (name !== 'This page') document.title = `${name} – Coming Soon | Qpaix`;
+
+      const form = document.querySelector('[data-cs-notify]');
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.reset();
+        document.querySelector('[data-cs-thanks]').hidden = false;
+      });
+    })();
+  </script>
+</body>
+</html>
