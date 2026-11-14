@@ -20,11 +20,7 @@
 .article .lead { font-size: 1.25rem; line-height: 1.7; color: #042439; font-weight: 500; }
 .article h2 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.75rem; line-height: 1.25; font-weight: 800; color: #042439; letter-spacing: -.01em; margin-top: 2.75rem; scroll-margin-top: 110px; }
 .article h3 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.3rem; font-weight: 700; color: #042439; margin-top: 2rem; scroll-margin-top: 110px; }
-<<<<<<< HEAD
 .article > p a, .article > ul a, .article > ol a, .article > blockquote a, .article figcaption a { color: #0891B2; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
-=======
-.article a { color: #0891B2; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
->>>>>>> 715372239ccba3e9148e7435bde58848561196b9
 .article strong { color: #042439; }
 .article ul, .article ol { padding-left: 1.4rem; }
 .article ul { list-style: none; padding-left: 0; }
@@ -61,7 +57,6 @@
 /* Horizontal chip rows: scroll without a visible scrollbar */
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
-<<<<<<< HEAD
 
 /* ===== Blog details v2 ===== */
 /* Hero cover: slow zoom on load */
@@ -102,5 +97,3 @@
 .article .not-article ul li::before { display: none; }
 /* Space between the "Quick summary" label and its list */
 .article .summary-box ul { margin-top: 15px; }
-=======
->>>>>>> 715372239ccba3e9148e7435bde58848561196b9
