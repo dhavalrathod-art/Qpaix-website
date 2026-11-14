@@ -25,6 +25,36 @@
   <div id="site-header"></div>
 
   <main id="main">
+<<<<<<< HEAD
+    <!-- ===================== 1. HERO: full-width cover with title on top ===================== -->
+    <!-- admin fields: cover_image, category, title, excerpt, author, published_date, read_time -->
+    <section class="relative overflow-hidden bg-navy-950 text-white min-h-[560px] md:min-h-[640px] flex items-end">
+      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=75&auto=format&fit=crop" alt="" class="post-hero-img absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/80 to-navy-950/25"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-navy-950/70 to-transparent"></div>
+      <div class="container relative pt-36 pb-12 md:pb-16">
+        <nav aria-label="Breadcrumb" class="text-sm text-navy-100">
+          <ol class="flex flex-wrap items-center gap-2">
+            <li><a href="../index.html" class="hover:text-white">Home</a></li>
+            <li aria-hidden="true" class="text-accent-400">/</li>
+            <li><a href="../blog.html" class="hover:text-white">Blog</a></li>
+            <li aria-hidden="true" class="text-accent-400">/</li>
+            <li class="text-white font-medium">Cloud</li>
+          </ol>
+        </nav>
+        <div class="max-w-4xl">
+          <span class="badge mt-6 bg-accent-500 text-navy-950">Cloud</span>
+          <h1 class="mt-5 text-3xl sm:text-5xl lg:text-[60px] font-extrabold tracking-tight leading-[1.07]">7 simple ways to cut your monthly cloud bill</h1>
+          <p class="mt-5 max-w-2xl text-lg text-navy-100 leading-relaxed">Most businesses overpay for AWS and Azure. These seven quick checks usually save 20–40% without any downtime.</p>
+        </div>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center gap-3 rounded-full bg-white/10 backdrop-blur border border-white/15 pl-1.5 pr-5 py-1.5">
+            <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=100&q=75&auto=format&fit=crop&h=100&crop=faces" alt="" class="w-9 h-9 rounded-full object-cover ring-2 ring-accent-400">
+            <span class="text-sm"><span class="font-semibold">Hiten Jadavra</span><span class="text-navy-200"> · Java Developer</span></span>
+          </span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/15 px-4 py-2.5 text-sm"><svg class="w-4 h-4 text-accent-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><time datetime="2026-10-15">15 Oct 2026</time></span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/15 px-4 py-2.5 text-sm"><svg class="w-4 h-4 text-accent-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5 min read</span>
+=======
     <!-- ===================== 1. POST HEADER ===================== -->
     <section class="bg-canvas">
       <div class="container pt-32 md:pt-40 pb-10 md:pb-14">
@@ -50,10 +80,41 @@
             <span class="flex items-center gap-2 text-muted"><svg class="w-4 h-4 text-accent-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><time datetime="2026-10-15">15 Oct 2026</time></span>
             <span class="flex items-center gap-2 text-muted"><svg class="w-4 h-4 text-accent-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>5 min read</span>
           </div>
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
         </div>
       </div>
     </section>
 
+<<<<<<< HEAD
+    <!-- ===================== 2. SHARE RAIL + ARTICLE + SIDEBAR ===================== -->
+    <section>
+      <div class="container py-14 md:py-20 lg:pl-4 grid gap-6 xl:gap-8 lg:grid-cols-[56px_minmax(0,1fr)_280px]">
+
+        <!-- Left: vertical share rail (desktop) -->
+        <aside class="hidden lg:block">
+          <div class="sticky top-32 flex flex-col items-center gap-2" data-share>
+            <span class="share-label">Share</span>
+            
+              <a data-share-to="linkedin" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+              <a data-share-to="whatsapp" target="_blank" rel="noopener" aria-label="Share on WhatsApp" class="share-btn"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88z"/></svg></a>
+              <a data-share-to="x" target="_blank" rel="noopener" aria-label="Share on X" class="share-btn"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
+              <a data-share-to="facebook" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+              <button type="button" data-copy-link aria-label="Copy link" class="share-btn"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></button>
+          </div>
+        </aside>
+
+        <!-- Article -->
+        <article class="article min-w-0 max-w-[880px]" data-article>
+          <!-- Quick summary box (admin: generated from the excerpt + tags, or its own "summary" field) -->
+          <div class="not-article summary-box">
+            <p class="flex items-center gap-2 text-xs font-bold uppercase tracking-[.18em] text-accent-600"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>Quick summary</p>
+            <ul class="mt-4 grid gap-2.5">
+              <li class="flex gap-3"><span class="mt-1 w-5 h-5 shrink-0 rounded-full bg-accent-500 text-navy-950 grid place-items-center"><svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Start with one real, measurable business problem</span></li>
+              <li class="flex gap-3"><span class="mt-1 w-5 h-5 shrink-0 rounded-full bg-accent-500 text-navy-950 grid place-items-center"><svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Build a small first version and test it with real users</span></li>
+              <li class="flex gap-3"><span class="mt-1 w-5 h-5 shrink-0 rounded-full bg-accent-500 text-navy-950 grid place-items-center"><svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span><span>Measure the result, then grow step by step</span></li>
+            </ul>
+          </div>
+=======
     <!-- Cover image -->
     <div class="bg-[linear-gradient(to_bottom,#F5F8FB_50%,#fff_50%)]">
       <div class="container">
@@ -67,6 +128,7 @@
     <section>
       <div class="container py-14 md:py-20 grid gap-12 lg:grid-cols-[1fr_300px] max-w-6xl">
         <article class="article min-w-0" data-article>
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
 
           <p class="lead">Most businesses overpay for AWS and Azure. These seven quick checks usually save 20–40% without any downtime. In this article we share what we have learned from real projects with Indian businesses, and give you a simple plan you can start with this month.</p>
 
@@ -111,6 +173,12 @@
           </ul>
           <p>If you would like a second opinion on your idea, our team is happy to talk it through on a free 30-minute call.</p>
 
+<<<<<<< HEAD
+          <!-- Mobile share row -->
+          <div class="not-article lg:hidden mt-10 flex flex-wrap items-center gap-2" data-share>
+            <span class="text-sm font-semibold text-navy-900 mr-1">Share:</span>
+            
+=======
           <!-- Tags -->
           <div class="not-article mt-12 pt-8 border-t border-line flex flex-wrap items-center gap-2">
             <span class="text-sm font-semibold text-navy-900 mr-1">Tags:</span>
@@ -143,11 +211,86 @@
           <div class="rounded-[1.5rem] border border-line p-6">
             <p class="text-xs font-semibold uppercase tracking-wider text-muted">Share this article</p>
             <div class="mt-4 flex flex-wrap gap-2" data-share>
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
               <a data-share-to="linkedin" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="share-btn"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
               <a data-share-to="whatsapp" target="_blank" rel="noopener" aria-label="Share on WhatsApp" class="share-btn"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88z"/></svg></a>
               <a data-share-to="x" target="_blank" rel="noopener" aria-label="Share on X" class="share-btn"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.68l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg></a>
               <a data-share-to="facebook" target="_blank" rel="noopener" aria-label="Share on Facebook" class="share-btn"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
               <button type="button" data-copy-link aria-label="Copy link" class="share-btn"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></button>
+<<<<<<< HEAD
+          </div>
+          <p class="not-article mt-2 text-xs text-emerald-600 font-medium" data-copied hidden>Link copied!</p>
+
+          <!-- Tags + helpful -->
+          <div class="not-article mt-10 pt-8 border-t border-line flex flex-wrap items-center justify-between gap-6">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="rounded-full bg-canvas border border-line px-3.5 py-1.5 text-sm font-medium text-navy-900">#Cloud</span><span class="rounded-full bg-canvas border border-line px-3.5 py-1.5 text-sm font-medium text-navy-900">#AWS</span><span class="rounded-full bg-canvas border border-line px-3.5 py-1.5 text-sm font-medium text-navy-900">#Cost</span>
+            </div>
+            <div class="flex items-center gap-3" data-helpful>
+              <span class="text-sm font-semibold text-navy-900">Was this helpful?</span>
+              <button type="button" class="helpful-btn" data-helpful-btn aria-label="Yes, helpful"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 10v12M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg></button>
+              <button type="button" class="helpful-btn" data-helpful-btn aria-label="No, not helpful"><svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 14V2M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/></svg></button>
+              <span class="text-sm font-medium text-emerald-600" data-helpful-thanks hidden>Thanks for your feedback!</span>
+            </div>
+          </div>
+
+          <!-- Author card -->
+          <div class="not-article mt-10 relative overflow-hidden rounded-[2rem] bg-navy-900 bg-grid text-white p-6 md:p-8">
+            <div class="absolute -top-20 -right-16 w-56 h-56 rounded-full bg-accent-500/20 blur-3xl"></div>
+            <div class="relative flex flex-col sm:flex-row gap-6 sm:items-center">
+              <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=240&q=75&auto=format&fit=crop&h=240&crop=faces" alt="Hiten Jadavra" class="w-24 h-24 rounded-[1.25rem] object-cover ring-4 ring-white/10 shrink-0">
+              <div class="flex-1">
+                <p class="text-xs font-bold uppercase tracking-[.18em] text-accent-300">About the author</p>
+                <p class="mt-1.5 font-heading text-2xl font-extrabold">Hiten Jadavra</p>
+                <p class="text-sm text-navy-200">Java Developer at Qpaix</p>
+                <p class="mt-3 text-sm text-navy-100 leading-relaxed">Shares practical lessons from real client projects, so business owners can make better technology decisions.</p>
+              </div>
+              <a href="#" target="_blank" rel="noopener" aria-label="Hiten Jadavra on LinkedIn" class="self-start sm:self-center inline-flex items-center gap-2 rounded-full bg-white text-[#0A66C2] px-4 py-2.5 text-sm font-semibold hover:bg-accent-400 hover:text-navy-950 transition-colors"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>Follow</a>
+            </div>
+          </div>
+
+          <!-- Previous / next with thumbnails -->
+          <nav class="not-article mt-10 grid gap-4 sm:grid-cols-2" aria-label="More articles">
+            <a href="data-dashboards-for-sme.html" class="group relative flex items-center gap-4 rounded-[1.5rem] border border-line bg-white p-3 transition hover:border-accent-500/50 hover:shadow-card ">
+              <span class="relative w-24 h-24 shrink-0 rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=240&q=75&auto=format&fit=crop&h=240" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"></span>
+              <span class="min-w-0">
+                <span class="flex items-center gap-1.5 text-xs font-semibold text-accent-600 "><svg class="w-3.5 h-3.5 rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Previous</span>
+                <span class="mt-1 block font-bold text-navy-900 leading-snug line-clamp-2 group-hover:text-accent-600 transition-colors">Why every growing business needs one live dashboard</span>
+              </span>
+            </a>
+            <a href="drones-in-agriculture.html" class="group relative flex items-center gap-4 rounded-[1.5rem] border border-line bg-white p-3 transition hover:border-accent-500/50 hover:shadow-card sm:flex-row-reverse sm:text-right">
+              <span class="relative w-24 h-24 shrink-0 rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=240&q=75&auto=format&fit=crop&h=240" alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy"></span>
+              <span class="min-w-0">
+                <span class="flex items-center gap-1.5 text-xs font-semibold text-accent-600 sm:justify-end">Next <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                <span class="mt-1 block font-bold text-navy-900 leading-snug line-clamp-2 group-hover:text-accent-600 transition-colors">5 ways drones are changing agriculture in Gujarat</span>
+              </span>
+            </a>
+          </nav>
+        </article>
+
+        <!-- Right sidebar -->
+        <aside class="self-start lg:sticky lg:top-28 grid gap-5">
+          <div class="rounded-[1.5rem] bg-canvas p-6">
+            <p class="text-xs font-bold uppercase tracking-[.18em] text-muted">In this article</p>
+            <ol class="toc toc-numbered mt-5" data-toc></ol>
+          </div>
+          <div class="rounded-[1.5rem] border border-line p-6">
+            <p class="font-heading text-lg font-extrabold text-navy-900">Get new articles by email</p>
+            <p class="mt-1 text-sm text-muted">One useful email a month. No spam.</p>
+            <!-- TODO: connect to the backend / email service -->
+            <form class="mt-4 grid gap-2" data-side-news>
+              <label class="sr-only" for="side-email">Email address</label>
+              <input id="side-email" type="email" required placeholder="you@company.com" class="field !rounded-full !py-2.5 text-sm">
+              <button type="submit" class="btn btn-primary btn-sm btn-pill w-full">Subscribe</button>
+            </form>
+            <p class="mt-2 text-xs font-medium text-emerald-600" data-side-news-thanks hidden>Thanks! You're subscribed.</p>
+          </div>
+          <a href="../contact.html" class="group relative overflow-hidden rounded-[1.5rem] bg-accent-500 text-navy-950 p-6 block">
+            <span class="absolute -right-6 -bottom-8 font-heading text-[110px] font-extrabold text-navy-950/[0.07] leading-none select-none" aria-hidden="true">Q</span>
+            <span class="relative block font-heading text-lg font-extrabold leading-snug">Want help with a project like this?</span>
+            <span class="relative mt-4 inline-flex items-center gap-2 text-sm font-bold">Book a free call <span class="w-8 h-8 rounded-full bg-navy-950 text-white grid place-items-center transition-transform duration-500 group-hover:rotate-[-45deg]"><svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+          </a>
+=======
             </div>
             <p class="mt-2 text-xs text-emerald-600 font-medium" data-copied hidden>Link copied!</p>
           </div>
@@ -157,6 +300,7 @@
             <p class="relative mt-2 text-sm text-navy-100">Get a free 30-minute call with our team.</p>
             <a href="../contact.html" class="relative btn btn-accent btn-sm btn-pill mt-5">Talk to us <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
         </aside>
       </div>
     </section>
@@ -168,7 +312,11 @@
         <div class="flex flex-wrap items-end justify-between gap-6">
           <div>
             <span class="eyebrow">Keep reading</span>
+<<<<<<< HEAD
+            <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-navy-900 tracking-tight">More from Cloud &amp; beyond</h2>
+=======
             <h2 class="mt-3 text-3xl md:text-4xl font-extrabold text-navy-900 tracking-tight">Related articles</h2>
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
           </div>
           <a href="../blog.html" class="btn btn-outline btn-pill">All articles</a>
         </div>

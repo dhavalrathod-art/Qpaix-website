@@ -20,7 +20,11 @@
 .article .lead { font-size: 1.25rem; line-height: 1.7; color: #042439; font-weight: 500; }
 .article h2 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.75rem; line-height: 1.25; font-weight: 800; color: #042439; letter-spacing: -.01em; margin-top: 2.75rem; scroll-margin-top: 110px; }
 .article h3 { font-family: "Plus Jakarta Sans", sans-serif; font-size: 1.3rem; font-weight: 700; color: #042439; margin-top: 2rem; scroll-margin-top: 110px; }
+<<<<<<< HEAD
+.article > p a, .article > ul a, .article > ol a, .article > blockquote a, .article figcaption a { color: #0891B2; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+=======
 .article a { color: #0891B2; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
 .article strong { color: #042439; }
 .article ul, .article ol { padding-left: 1.4rem; }
 .article ul { list-style: none; padding-left: 0; }
@@ -57,3 +61,46 @@
 /* Horizontal chip rows: scroll without a visible scrollbar */
 .no-scrollbar { scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
+<<<<<<< HEAD
+
+/* ===== Blog details v2 ===== */
+/* Hero cover: slow zoom on load */
+.post-hero-img { animation: post-zoom 12s ease-out forwards; }
+@keyframes post-zoom { from { transform: scale(1.12); } to { transform: scale(1); } }
+
+/* Vertical share rail */
+.share-label { writing-mode: vertical-rl; transform: rotate(180deg); font-size: .7rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #64748B; margin-bottom: .5rem; }
+
+/* Quick summary box at the top of the article */
+.summary-box { border-radius: 1.5rem; background: linear-gradient(135deg, #ECFEFF, #EEF4F8); border: 1px solid #CFFAFE; padding: 1.5rem 1.75rem; margin-bottom: 2.5rem; font-size: 1rem; line-height: 1.6; color: #042439; font-weight: 500; }
+
+/* Drop cap on the first paragraph */
+.article .lead::first-letter { float: left; font-family: "Plus Jakarta Sans", sans-serif; font-size: 3.8em; line-height: .85; font-weight: 800; color: #042439; margin: .06em .14em 0 0; background: linear-gradient(135deg, #042439, #0891B2); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* Numbered table of contents */
+.toc-numbered { counter-reset: toc; }
+.toc-numbered li { counter-increment: toc; }
+.toc-numbered a { display: flex; gap: .75rem; align-items: baseline; border-left: 0; padding: .55rem 0; border-bottom: 1px dashed #D6E3EC; border-radius: 0; background: none; }
+.toc-numbered li:last-child a { border-bottom: 0; }
+.toc-numbered a::before { content: counter(toc, decimal-leading-zero); font-family: "Plus Jakarta Sans", sans-serif; font-size: .75rem; font-weight: 800; color: #ADC7D9; transition: color .25s; }
+.toc-numbered a.is-active { background: none; border-radius: 0; color: #042439; }
+.toc-numbered a.is-active::before { color: #06B6D4; }
+
+/* Circular reading progress in the TOC header */
+.read-ring { --p: 0; width: 2.75rem; height: 2.75rem; border-radius: 999px; display: grid; place-items: center; background: conic-gradient(#06B6D4 calc(var(--p) * 1%), #D6E3EC 0); position: relative; }
+.read-ring::before { content: ""; position: absolute; inset: 4px; border-radius: 999px; background: #F5F8FB; }
+.read-ring span { position: relative; font-size: .62rem; font-weight: 800; color: #042439; }
+
+/* "Was this helpful?" buttons */
+.helpful-btn { width: 2.5rem; height: 2.5rem; border-radius: 999px; border: 1px solid #E2E8F0; display: grid; place-items: center; color: #042439; transition: background-color .25s, color .25s, border-color .25s; }
+.helpful-btn:hover, .helpful-btn.is-picked { background: #042439; border-color: #042439; color: #22D3EE; }
+
+@media (prefers-reduced-motion: reduce) { .post-hero-img { animation: none; } }
+.share-btn.is-copied { background: #10B981; border-color: #10B981; color: #fff; }
+/* Boxes inside the article (summary, tags, author…) do not use the article list bullets */
+.article .not-article ul li { padding-left: 0; }
+.article .not-article ul li::before { display: none; }
+/* Space between the "Quick summary" label and its list */
+.article .summary-box ul { margin-top: 15px; }
+=======
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9

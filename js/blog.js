@@ -52,12 +52,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---------- DETAILS: reading progress bar ----------
   const bar = document.querySelector('[data-read-progress]');
+<<<<<<< HEAD
+  const ring = document.querySelector('[data-read-ring]');
+  const ringText = document.querySelector('[data-read-percent]');
+=======
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
   if (bar && article) {
     const update = () => {
       const r = article.getBoundingClientRect();
       const total = r.height - window.innerHeight * 0.6;
       const p = Math.min(Math.max(-r.top / (total > 0 ? total : 1), 0), 1);
       bar.style.transform = `scaleX(${p})`;
+<<<<<<< HEAD
+      if (ring) ring.style.setProperty('--p', Math.round(p * 100));
+      if (ringText) ringText.textContent = Math.round(p * 100) + '%';
+=======
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
     };
     window.addEventListener('scroll', update, { passive: true });
     window.addEventListener('resize', update);
@@ -65,8 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---------- DETAILS: share buttons ----------
+<<<<<<< HEAD
+  // (works for every share block: vertical rail on desktop + row on mobile)
+  const shares = document.querySelectorAll('[data-share]');
+  if (shares.length) {
+=======
   const share = document.querySelector('[data-share]');
   if (share) {
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
     const url = encodeURIComponent(location.href);
     const title = encodeURIComponent(document.title.replace(/ \| Qpaix Blog$/, ''));
     const targets = {
@@ -75,6 +91,41 @@ document.addEventListener('DOMContentLoaded', () => {
       x: `https://twitter.com/intent/tweet?text=${title}&url=${url}`,
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
     };
+<<<<<<< HEAD
+    const copied = document.querySelector('[data-copied]');
+    shares.forEach((share) => {
+      share.querySelectorAll('[data-share-to]').forEach((a) => { a.href = targets[a.dataset.shareTo]; });
+      share.querySelector('[data-copy-link]')?.addEventListener('click', async (e) => {
+        try { await navigator.clipboard.writeText(location.href); } catch (err) { /* ignore */ }
+        const btn = e.currentTarget;
+        btn.classList.add('is-copied');
+        btn.setAttribute('aria-label', 'Link copied');
+        if (copied) copied.hidden = false;
+        setTimeout(() => { btn.classList.remove('is-copied'); btn.setAttribute('aria-label', 'Copy link'); if (copied) copied.hidden = true; }, 1800);
+      });
+    });
+  }
+
+  // ---------- DETAILS: "Was this helpful?" (front-end only for now) ----------
+  const helpful = document.querySelector('[data-helpful]');
+  if (helpful) {
+    helpful.querySelectorAll('[data-helpful-btn]').forEach((b) => b.addEventListener('click', () => {
+      helpful.querySelectorAll('[data-helpful-btn]').forEach((x) => x.classList.toggle('is-picked', x === b));
+      helpful.querySelector('[data-helpful-thanks]').hidden = false;
+      // TODO: send the vote to the backend
+    }));
+  }
+
+  // ---------- DETAILS: sidebar newsletter (front-end only for now) ----------
+  const news = document.querySelector('[data-side-news]');
+  news?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!news.checkValidity()) { news.reportValidity(); return; }
+    news.reset();
+    const t = document.querySelector('[data-side-news-thanks]');
+    if (t) t.hidden = false;
+  });
+=======
     share.querySelectorAll('[data-share-to]').forEach((a) => { a.href = targets[a.dataset.shareTo]; });
     const copyBtn = share.querySelector('[data-copy-link]');
     const copied = document.querySelector('[data-copied]');
@@ -83,4 +134,5 @@ document.addEventListener('DOMContentLoaded', () => {
       if (copied) { copied.hidden = false; setTimeout(() => (copied.hidden = true), 1800); }
     });
   }
+>>>>>>> 715372239ccba3e9148e7435bde58848561196b9
 });
